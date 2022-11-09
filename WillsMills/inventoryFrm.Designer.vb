@@ -47,12 +47,19 @@ Partial Class inventoryFrm
         Me.entry_date = New System.Windows.Forms.DateTimePicker()
         Me.statusMsg_lbl = New System.Windows.Forms.Label()
         Me.uploadProduct_btn = New System.Windows.Forms.Button()
-        Me.inventory_Grid = New System.Windows.Forms.DataGridView()
         Me.search_txt = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.productID_txt = New System.Windows.Forms.TextBox()
+        Me.separater_txt = New System.Windows.Forms.Label()
+        Me.Asset_Code_txt = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.couponPrice_txt = New System.Windows.Forms.TextBox()
+        Me.willMillsPrice_txt = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.inventory_Grid = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.productPhoto_picture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.inventory_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'productPhoto_picture
@@ -88,10 +95,11 @@ Partial Class inventoryFrm
         '
         'resellerRate_txt
         '
-        Me.resellerRate_txt.Location = New System.Drawing.Point(203, 282)
+        Me.resellerRate_txt.Location = New System.Drawing.Point(202, 288)
         Me.resellerRate_txt.Name = "resellerRate_txt"
         Me.resellerRate_txt.Size = New System.Drawing.Size(267, 22)
         Me.resellerRate_txt.TabIndex = 5
+        Me.resellerRate_txt.Text = "50"
         '
         'Label1
         '
@@ -132,7 +140,7 @@ Partial Class inventoryFrm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(99, 314)
+        Me.Label6.Location = New System.Drawing.Point(124, 396)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 17)
         Me.Label6.TabIndex = 10
@@ -151,7 +159,7 @@ Partial Class inventoryFrm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(99, 359)
+        Me.Label7.Location = New System.Drawing.Point(100, 419)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(79, 17)
         Me.Label7.TabIndex = 12
@@ -159,7 +167,7 @@ Partial Class inventoryFrm
         '
         'description_txt
         '
-        Me.description_txt.Location = New System.Drawing.Point(203, 359)
+        Me.description_txt.Location = New System.Drawing.Point(204, 419)
         Me.description_txt.Name = "description_txt"
         Me.description_txt.Size = New System.Drawing.Size(267, 96)
         Me.description_txt.TabIndex = 13
@@ -168,15 +176,15 @@ Partial Class inventoryFrm
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(98, 287)
+        Me.Label8.Location = New System.Drawing.Point(56, 288)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(94, 17)
+        Me.Label8.Size = New System.Drawing.Size(137, 17)
         Me.Label8.TabIndex = 14
-        Me.Label8.Text = "Reseller Rate"
+        Me.Label8.Text = "Reseller commission"
         '
         'sellRate_txt
         '
-        Me.sellRate_txt.Location = New System.Drawing.Point(203, 314)
+        Me.sellRate_txt.Location = New System.Drawing.Point(204, 393)
         Me.sellRate_txt.Name = "sellRate_txt"
         Me.sellRate_txt.Size = New System.Drawing.Size(267, 22)
         Me.sellRate_txt.TabIndex = 15
@@ -191,7 +199,7 @@ Partial Class inventoryFrm
         '
         'profitPrice_Txt
         '
-        Me.profitPrice_Txt.Location = New System.Drawing.Point(616, 410)
+        Me.profitPrice_Txt.Location = New System.Drawing.Point(630, 408)
         Me.profitPrice_Txt.Name = "profitPrice_Txt"
         Me.profitPrice_Txt.Size = New System.Drawing.Size(267, 22)
         Me.profitPrice_Txt.TabIndex = 18
@@ -199,11 +207,11 @@ Partial Class inventoryFrm
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(512, 410)
+        Me.Label9.Location = New System.Drawing.Point(526, 408)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(77, 17)
+        Me.Label9.Size = New System.Drawing.Size(105, 17)
         Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Profit Price"
+        Me.Label9.Text = "WillsMills Profit "
         '
         'OpenFileDialog1
         '
@@ -211,7 +219,7 @@ Partial Class inventoryFrm
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(396, 474)
+        Me.btnSave.Location = New System.Drawing.Point(396, 541)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 28)
         Me.btnSave.TabIndex = 19
@@ -221,7 +229,7 @@ Partial Class inventoryFrm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(512, 377)
+        Me.Label10.Location = New System.Drawing.Point(526, 375)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(38, 17)
         Me.Label10.TabIndex = 20
@@ -229,7 +237,7 @@ Partial Class inventoryFrm
         '
         'entry_date
         '
-        Me.entry_date.Location = New System.Drawing.Point(616, 372)
+        Me.entry_date.Location = New System.Drawing.Point(630, 370)
         Me.entry_date.Name = "entry_date"
         Me.entry_date.Size = New System.Drawing.Size(267, 22)
         Me.entry_date.TabIndex = 21
@@ -252,31 +260,12 @@ Partial Class inventoryFrm
         Me.uploadProduct_btn.Text = "Upload"
         Me.uploadProduct_btn.UseVisualStyleBackColor = True
         '
-        'inventory_Grid
-        '
-        Me.inventory_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.inventory_Grid.Location = New System.Drawing.Point(1, 623)
-        Me.inventory_Grid.Name = "inventory_Grid"
-        Me.inventory_Grid.RowHeadersWidth = 51
-        Me.inventory_Grid.RowTemplate.Height = 24
-        Me.inventory_Grid.Size = New System.Drawing.Size(969, 369)
-        Me.inventory_Grid.TabIndex = 24
-        '
         'search_txt
         '
-        Me.search_txt.Location = New System.Drawing.Point(703, 595)
+        Me.search_txt.Location = New System.Drawing.Point(692, 521)
         Me.search_txt.Name = "search_txt"
         Me.search_txt.Size = New System.Drawing.Size(267, 22)
         Me.search_txt.TabIndex = 25
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(487, 165)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 28)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'productID_txt
         '
@@ -284,16 +273,99 @@ Partial Class inventoryFrm
         Me.productID_txt.Name = "productID_txt"
         Me.productID_txt.Size = New System.Drawing.Size(267, 22)
         Me.productID_txt.TabIndex = 27
+        Me.productID_txt.Visible = False
+        '
+        'separater_txt
+        '
+        Me.separater_txt.AutoSize = True
+        Me.separater_txt.Location = New System.Drawing.Point(484, 126)
+        Me.separater_txt.Name = "separater_txt"
+        Me.separater_txt.Size = New System.Drawing.Size(13, 17)
+        Me.separater_txt.TabIndex = 33
+        Me.separater_txt.Text = "-"
+        Me.separater_txt.Visible = False
+        '
+        'Asset_Code_txt
+        '
+        Me.Asset_Code_txt.Location = New System.Drawing.Point(515, 121)
+        Me.Asset_Code_txt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Asset_Code_txt.Name = "Asset_Code_txt"
+        Me.Asset_Code_txt.Size = New System.Drawing.Size(29, 22)
+        Me.Asset_Code_txt.TabIndex = 46
+        Me.Asset_Code_txt.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(99, 332)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(93, 17)
+        Me.Label11.TabIndex = 48
+        Me.Label11.Text = "Coupon Price"
+        '
+        'couponPrice_txt
+        '
+        Me.couponPrice_txt.Location = New System.Drawing.Point(204, 327)
+        Me.couponPrice_txt.Name = "couponPrice_txt"
+        Me.couponPrice_txt.Size = New System.Drawing.Size(267, 22)
+        Me.couponPrice_txt.TabIndex = 47
+        Me.couponPrice_txt.Text = "100"
+        '
+        'willMillsPrice_txt
+        '
+        Me.willMillsPrice_txt.Location = New System.Drawing.Point(204, 367)
+        Me.willMillsPrice_txt.Name = "willMillsPrice_txt"
+        Me.willMillsPrice_txt.Size = New System.Drawing.Size(267, 22)
+        Me.willMillsPrice_txt.TabIndex = 50
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(91, 370)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(100, 17)
+        Me.Label12.TabIndex = 49
+        Me.Label12.Text = "WillsMills Price"
+        '
+        'inventory_Grid
+        '
+        Me.inventory_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.inventory_Grid.BackgroundColor = System.Drawing.Color.White
+        Me.inventory_Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.inventory_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.inventory_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.inventory_Grid.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.inventory_Grid.GridColor = System.Drawing.Color.White
+        Me.inventory_Grid.Location = New System.Drawing.Point(0, 0)
+        Me.inventory_Grid.Name = "inventory_Grid"
+        Me.inventory_Grid.RowHeadersWidth = 51
+        Me.inventory_Grid.RowTemplate.Height = 24
+        Me.inventory_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.inventory_Grid.Size = New System.Drawing.Size(947, 304)
+        Me.inventory_Grid.TabIndex = 51
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.inventory_Grid)
+        Me.Panel1.Location = New System.Drawing.Point(12, 611)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(947, 304)
+        Me.Panel1.TabIndex = 52
         '
         'inventoryFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(971, 995)
+        Me.ClientSize = New System.Drawing.Size(971, 1055)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.willMillsPrice_txt)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.couponPrice_txt)
+        Me.Controls.Add(Me.Asset_Code_txt)
+        Me.Controls.Add(Me.separater_txt)
         Me.Controls.Add(Me.productID_txt)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.search_txt)
-        Me.Controls.Add(Me.inventory_Grid)
         Me.Controls.Add(Me.uploadProduct_btn)
         Me.Controls.Add(Me.statusMsg_lbl)
         Me.Controls.Add(Me.entry_date)
@@ -317,11 +389,13 @@ Partial Class inventoryFrm
         Me.Controls.Add(Me.prodctName_txt)
         Me.Controls.Add(Me.prodctCode_txt)
         Me.Controls.Add(Me.productPhoto_picture)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "inventoryFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "WillsMills"
         CType(Me.productPhoto_picture, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.inventory_Grid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -350,8 +424,14 @@ Partial Class inventoryFrm
     Friend WithEvents entry_date As DateTimePicker
     Friend WithEvents statusMsg_lbl As Label
     Friend WithEvents uploadProduct_btn As Button
-    Friend WithEvents inventory_Grid As DataGridView
     Friend WithEvents search_txt As TextBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents productID_txt As TextBox
+    Friend WithEvents separater_txt As Label
+    Friend WithEvents Asset_Code_txt As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents couponPrice_txt As TextBox
+    Friend WithEvents willMillsPrice_txt As TextBox
+    Friend WithEvents Label12 As Label
+    Private WithEvents inventory_Grid As DataGridView
+    Friend WithEvents Panel1 As Panel
 End Class

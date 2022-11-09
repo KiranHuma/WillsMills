@@ -2,7 +2,6 @@ D:\Vb projects\WillsMills\WillsMills\bin\Debug\WillsMills.exe.config
 D:\Vb projects\WillsMills\WillsMills\bin\Debug\WillsMills.exe
 D:\Vb projects\WillsMills\WillsMills\bin\Debug\WillsMills.pdb
 D:\Vb projects\WillsMills\WillsMills\bin\Debug\WillsMills.xml
-D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.vbproj.AssemblyReference.cache
 D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.inventoryFrm.resources
 D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.Resources.resources
 D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.resellerAccountFrm.resources
