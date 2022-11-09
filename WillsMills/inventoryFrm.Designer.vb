@@ -56,10 +56,10 @@ Partial Class inventoryFrm
         Me.willMillsPrice_txt = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.inventory_Grid = New System.Windows.Forms.DataGridView()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.productPhoto_picture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.inventory_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'productPhoto_picture
@@ -199,20 +199,21 @@ Partial Class inventoryFrm
         '
         'profitPrice_Txt
         '
-        Me.profitPrice_Txt.Location = New System.Drawing.Point(481, 416)
+        Me.profitPrice_Txt.Location = New System.Drawing.Point(124, 55)
         Me.profitPrice_Txt.Name = "profitPrice_Txt"
-        Me.profitPrice_Txt.Size = New System.Drawing.Size(267, 22)
+        Me.profitPrice_Txt.Size = New System.Drawing.Size(250, 22)
         Me.profitPrice_Txt.TabIndex = 18
         Me.profitPrice_Txt.Visible = False
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(478, 391)
+        Me.Label9.Location = New System.Drawing.Point(13, 58)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(105, 17)
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "WillsMills Profit "
+        Me.Label9.Visible = False
         '
         'OpenFileDialog1
         '
@@ -230,7 +231,7 @@ Partial Class inventoryFrm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(478, 337)
+        Me.Label10.Location = New System.Drawing.Point(16, 15)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(38, 17)
         Me.Label10.TabIndex = 20
@@ -239,10 +240,11 @@ Partial Class inventoryFrm
         '
         'entry_date
         '
-        Me.entry_date.Location = New System.Drawing.Point(481, 356)
+        Me.entry_date.Location = New System.Drawing.Point(85, 19)
         Me.entry_date.Name = "entry_date"
         Me.entry_date.Size = New System.Drawing.Size(267, 22)
         Me.entry_date.TabIndex = 21
+        Me.entry_date.Visible = False
         '
         'statusMsg_lbl
         '
@@ -264,7 +266,7 @@ Partial Class inventoryFrm
         '
         'search_txt
         '
-        Me.search_txt.Location = New System.Drawing.Point(1137, 70)
+        Me.search_txt.Location = New System.Drawing.Point(1158, 75)
         Me.search_txt.Name = "search_txt"
         Me.search_txt.Size = New System.Drawing.Size(267, 22)
         Me.search_txt.TabIndex = 25
@@ -334,37 +336,31 @@ Partial Class inventoryFrm
         Me.inventory_Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.inventory_Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.inventory_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.inventory_Grid.Location = New System.Drawing.Point(876, 98)
+        Me.inventory_Grid.Location = New System.Drawing.Point(717, 98)
         Me.inventory_Grid.Name = "inventory_Grid"
         Me.inventory_Grid.RowHeadersWidth = 51
         Me.inventory_Grid.RowTemplate.Height = 24
         Me.inventory_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.inventory_Grid.Size = New System.Drawing.Size(528, 481)
+        Me.inventory_Grid.Size = New System.Drawing.Size(708, 481)
         Me.inventory_Grid.TabIndex = 53
         '
-        'Label13
+        'Panel1
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(478, 391)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(105, 17)
-        Me.Label13.TabIndex = 17
-        Me.Label13.Text = "WillsMills Profit "
-        Me.Label13.Visible = False
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(481, 356)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(267, 22)
-        Me.DateTimePicker1.TabIndex = 21
-        Me.DateTimePicker1.Visible = False
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.entry_date)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.profitPrice_Txt)
+        Me.Panel1.Location = New System.Drawing.Point(59, 22)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(43, 21)
+        Me.Panel1.TabIndex = 54
         '
         'inventoryFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1437, 630)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.inventory_Grid)
         Me.Controls.Add(Me.willMillsPrice_txt)
         Me.Controls.Add(Me.Label12)
@@ -376,13 +372,7 @@ Partial Class inventoryFrm
         Me.Controls.Add(Me.search_txt)
         Me.Controls.Add(Me.uploadProduct_btn)
         Me.Controls.Add(Me.statusMsg_lbl)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.entry_date)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.profitPrice_Txt)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.wholeSeller_txt)
         Me.Controls.Add(Me.sellRate_txt)
         Me.Controls.Add(Me.Label8)
@@ -405,6 +395,8 @@ Partial Class inventoryFrm
         Me.Text = "WillsMills"
         CType(Me.productPhoto_picture, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.inventory_Grid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -442,6 +434,5 @@ Partial Class inventoryFrm
     Friend WithEvents willMillsPrice_txt As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents inventory_Grid As DataGridView
-    Friend WithEvents Label13 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Panel1 As Panel
 End Class

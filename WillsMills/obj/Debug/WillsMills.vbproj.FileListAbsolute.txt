@@ -11,3 +11,4 @@ D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.vbproj.CoreCompileInpu
 D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.exe
 D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.xml
 D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.pdb
+D:\Vb projects\WillsMills\WillsMills\obj\Debug\WillsMills.vbproj.AssemblyReference.cache
