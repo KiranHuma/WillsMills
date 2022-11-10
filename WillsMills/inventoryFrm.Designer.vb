@@ -67,6 +67,10 @@ Partial Class inventoryFrm
         Me.productCategory_txt = New System.Windows.Forms.ComboBox()
         Me.productStatus_txt = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.foredit_txt = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
         CType(Me.productPhoto_picture, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.inventory_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -206,7 +210,6 @@ Partial Class inventoryFrm
         Me.profitPrice_Txt.Name = "profitPrice_Txt"
         Me.profitPrice_Txt.Size = New System.Drawing.Size(250, 22)
         Me.profitPrice_Txt.TabIndex = 18
-        Me.profitPrice_Txt.Visible = False
         '
         'Label9
         '
@@ -216,7 +219,6 @@ Partial Class inventoryFrm
         Me.Label9.Size = New System.Drawing.Size(105, 17)
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "WillsMills Profit "
-        Me.Label9.Visible = False
         '
         'OpenFileDialog1
         '
@@ -234,25 +236,23 @@ Partial Class inventoryFrm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(16, 15)
+        Me.Label10.Location = New System.Drawing.Point(744, 620)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(38, 17)
         Me.Label10.TabIndex = 20
         Me.Label10.Text = "Date"
-        Me.Label10.Visible = False
         '
         'entry_date
         '
-        Me.entry_date.Location = New System.Drawing.Point(85, 19)
+        Me.entry_date.Location = New System.Drawing.Point(747, 640)
         Me.entry_date.Name = "entry_date"
-        Me.entry_date.Size = New System.Drawing.Size(267, 22)
+        Me.entry_date.Size = New System.Drawing.Size(209, 22)
         Me.entry_date.TabIndex = 21
-        Me.entry_date.Visible = False
         '
         'statusMsg_lbl
         '
         Me.statusMsg_lbl.AutoSize = True
-        Me.statusMsg_lbl.Location = New System.Drawing.Point(744, 668)
+        Me.statusMsg_lbl.Location = New System.Drawing.Point(744, 701)
         Me.statusMsg_lbl.Name = "statusMsg_lbl"
         Me.statusMsg_lbl.Size = New System.Drawing.Size(59, 17)
         Me.statusMsg_lbl.TabIndex = 22
@@ -349,14 +349,13 @@ Partial Class inventoryFrm
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.entry_date)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.profitPrice_Txt)
-        Me.Panel1.Location = New System.Drawing.Point(59, 22)
+        Me.Panel1.Location = New System.Drawing.Point(73, 22)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(43, 21)
+        Me.Panel1.Size = New System.Drawing.Size(10, 38)
         Me.Panel1.TabIndex = 54
+        Me.Panel1.Visible = False
         '
         'Label13
         '
@@ -451,12 +450,52 @@ Partial Class inventoryFrm
         Me.Label17.TabIndex = 66
         Me.Label17.Text = "Upload on WillsMills"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(541, 422)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 68
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(602, 724)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 28)
+        Me.Button2.TabIndex = 69
+        Me.Button2.Text = "Edit"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'foredit_txt
+        '
+        Me.foredit_txt.Location = New System.Drawing.Point(391, 69)
+        Me.foredit_txt.Name = "foredit_txt"
+        Me.foredit_txt.Size = New System.Drawing.Size(79, 22)
+        Me.foredit_txt.TabIndex = 70
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(402, 49)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(72, 17)
+        Me.Label18.TabIndex = 71
+        Me.Label18.Text = "Product id"
+        '
         'inventoryFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1437, 772)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.foredit_txt)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.productStatus_txt)
+        Me.Controls.Add(Me.entry_date)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.productCategory_txt)
         Me.Controls.Add(Me.productSeason_txt)
@@ -551,4 +590,8 @@ Partial Class inventoryFrm
     Friend WithEvents productCategory_txt As ComboBox
     Friend WithEvents productStatus_txt As ComboBox
     Friend WithEvents Label17 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents foredit_txt As TextBox
+    Friend WithEvents Label18 As Label
 End Class
