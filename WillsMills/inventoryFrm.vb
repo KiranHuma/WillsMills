@@ -494,7 +494,7 @@ Public Class inventoryFrm
         dbaccessconnection()
         Try
             con.Open()
-            cmd.CommandText = ("UPDATE inventory_tb SET Product_Image=@photo where Product_ID=" & foredit_txt.Text & "")
+            cmd.CommandText = ("UPDATE inventory_tb SET Product_Image=@photo ,WholeSeller_Name='" & wholeSeller_txt.Text & "',Product_Description='" & description_txt.Text & "' where Product_ID=" & foredit_txt.Text & "")
             Dim ms As New MemoryStream()
             Dim bmpImage As New Bitmap(productPhoto_picture.Image)
             bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
@@ -521,5 +521,6 @@ Public Class inventoryFrm
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         inventory_edit()
+        inventory_getdata()
     End Sub
 End Class
